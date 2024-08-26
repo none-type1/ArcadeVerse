@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Front-end development for ArcadeVerse -  Game Platform Homepage">
+    <meta name="auther" content="none-type1">
+    <title>ArcadeVerse</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type="module" src="script.js"></script> 
+</head>
+<body>
+    <header>
+        <button id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div id="nav-more">
+            <a>My Games</a>
+            <a>Browes</a>
+            <a>Favorites</a>
+            <a>My Cart</a>
+        </div>
+        <img id="header-logo" src="/images/logo.png" alt="logo">
+        <div id="nav">
+            <div>
+                <form>
+                    <svg width="36px" height="36px" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 11.1455C5.49956 8.21437 7.56975 5.69108 10.4445 5.11883C13.3193 4.54659 16.198 6.08477 17.32 8.79267C18.4421 11.5006 17.495 14.624 15.058 16.2528C12.621 17.8815 9.37287 17.562 7.3 15.4895C6.14763 14.3376 5.50014 12.775 5.5 11.1455Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15.989 15.4905L19.5 19.0015" stroke="#dedede" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    <input type="text" placeholder="Search Games">
+                </form>
+                <a>Browes</a>
+                <a>My Games</a>
+            </div>
+            <div>
+                <svg id="header-search-icon" width="34px" height="34px" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 11.1455C5.49956 8.21437 7.56975 5.69108 10.4445 5.11883C13.3193 4.54659 16.198 6.08477 17.32 8.79267C18.4421 11.5006 17.495 14.624 15.058 16.2528C12.621 17.8815 9.37287 17.562 7.3 15.4895C6.14763 14.3376 5.50014 12.775 5.5 11.1455Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15.989 15.4905L19.5 19.0015" stroke="#dedede" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                <svg width="28px" height="28px" viewBox="0 0 24 24" id="_24x24_On_Light_Notification" data-name="24x24/On Light/Notification" xmlns="http://www.w3.org/2000/svg" fill="#dedede"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect id="view-box" width="24" height="24" fill="none"></rect> <path id="Shape" d="M6,17v-.5H2.25A2.253,2.253,0,0,1,0,14.25v-.382a2.542,2.542,0,0,1,1.415-2.289A1.248,1.248,0,0,0,2.1,10.572l.446-4.91a6.225,6.225,0,0,1,12.4,0l.446,4.91a1.26,1.26,0,0,0,.686,1.005,2.547,2.547,0,0,1,1.418,2.29v.382a2.252,2.252,0,0,1-2.25,2.25H11.5V17A2.75,2.75,0,0,1,6,17Zm1.5,0A1.25,1.25,0,0,0,10,17v-.5H7.5ZM4.045,5.8,3.6,10.708A2.738,2.738,0,0,1,2.089,12.92a1.055,1.055,0,0,0-.589.949v.382A.751.751,0,0,0,2.25,15h13A.751.751,0,0,0,16,14.25v-.382a1.054,1.054,0,0,0-.586-.948A2.739,2.739,0,0,1,13.9,10.708L13.456,5.8a4.725,4.725,0,0,0-9.411,0Z" transform="translate(3.25 2.25)" fill="#dedede"></path> </g></svg>
+                <svg fill="#dedede" width="28px" height="28px" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M 4.7265 20.6406 C 4.7265 30.6250 13.0937 40.4453 26.2890 48.8828 C 26.8046 49.1875 27.5078 49.5156 28.0000 49.5156 C 28.4922 49.5156 29.1953 49.1875 29.6875 48.8828 C 42.9062 40.4453 51.2735 30.6250 51.2735 20.6406 C 51.2735 12.3438 45.5781 6.4844 37.9843 6.4844 C 33.6250 6.4844 30.1094 8.5469 28.0000 11.7109 C 25.8906 8.5703 22.3515 6.4844 18.0156 6.4844 C 10.4219 6.4844 4.7265 12.3438 4.7265 20.6406 Z M 8.5000 20.6406 C 8.5000 14.4063 12.5312 10.2578 17.9687 10.2578 C 22.3750 10.2578 24.8828 13.0000 26.4062 15.3438 C 27.0390 16.2813 27.4375 16.5391 28.0000 16.5391 C 28.5625 16.5391 28.9141 16.2578 29.5937 15.3438 C 31.1875 13.0469 33.6484 10.2578 38.0312 10.2578 C 43.4687 10.2578 47.5000 14.4063 47.5000 20.6406 C 47.5000 29.3594 38.2890 38.7578 28.4687 45.2734 C 28.2343 45.4375 28.0937 45.5547 28.0000 45.5547 C 27.9062 45.5547 27.7422 45.4375 27.5078 45.2734 C 17.7109 38.7578 8.5000 29.3594 8.5000 20.6406 Z"></path></g></svg>
+                <svg width="28px" height="28px" style="transform: translate(0,2px);" viewBox="0 0 32 32" id="i-cart" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 6 L30 6 27 19 9 19 M27 23 L10 23 5 2 2 2"></path> </g></svg>
+                <a id="header-profile">
+                    <img id="profile-image" src="/images/profile.png" alt="profile">
+                    <span>none-tyle1</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="title">
+            <div id="title-detail">
+                <img src="/images/games/dragons-dogma-2/logo.png" alt="Game-name">
+                <p>What dogma does your heart see through your eyes? 'Tis a tale of one who shall slay the Dragon and claim the throne.</p>
+                <span>$99</span>
+                <div>
+                    <a id="bye-now">Buy Now</a>
+                    <a id="add-to-wishlist">Add to Wishlist</a>
+                </div>
+            </div>
+            <div id="title-game-slider-div">
+                <div>
+                    Featured Products
+                    <div>
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#dedede"></path> </g></svg>
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#dedede"></path> </g></svg>
+                    </div>
+                </div>
+                <div id="title-game-slider-cover">
+                    <span></span>
+                    <section id="title-game-slider">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 232 172" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="74ca0e11ba174eb2b555348627ccb4a5" export-id="0adcea718f764ad5a3855e1b000cd962" cached="false"><rect width="230" height="170" rx="22" ry="22" transform="translate(1 1)"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+                                       <stop offset="0%" stop-color="rgb(215, 105, 255)" />
+                                       <stop offset="100%" stop-color="rgb(79, 165, 246)" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="selected"></div> 
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 232 172" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="74ca0e11ba174eb2b555348627ccb4a5" export-id="0adcea718f764ad5a3855e1b000cd962" cached="false"><rect width="230" height="170" rx="22" ry="22" transform="translate(1 1)"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+                                       <stop offset="0%" stop-color="rgb(215, 105, 255)" />
+                                       <stop offset="100%" stop-color="rgb(79, 165, 246)" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div></div>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 232 172" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="74ca0e11ba174eb2b555348627ccb4a5" export-id="0adcea718f764ad5a3855e1b000cd962" cached="false"><rect width="230" height="170" rx="22" ry="22" transform="translate(1 1)"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+                                       <stop offset="0%" stop-color="rgb(215, 105, 255)" />
+                                       <stop offset="100%" stop-color="rgb(79, 165, 246)" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div></div>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 232 172" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="74ca0e11ba174eb2b555348627ccb4a5" export-id="0adcea718f764ad5a3855e1b000cd962" cached="false"><rect width="230" height="170" rx="22" ry="22" transform="translate(1 1)"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+                                       <stop offset="0%" stop-color="rgb(215, 105, 255)" />
+                                       <stop offset="100%" stop-color="rgb(79, 165, 246)" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div></div>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 232 172" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="74ca0e11ba174eb2b555348627ccb4a5" export-id="0adcea718f764ad5a3855e1b000cd962" cached="false"><rect width="230" height="170" rx="22" ry="22" transform="translate(1 1)"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+                                       <stop offset="0%" stop-color="rgb(215, 105, 255)" />
+                                       <stop offset="100%" stop-color="rgb(79, 165, 246)" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div></div>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 232 172" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="74ca0e11ba174eb2b555348627ccb4a5" export-id="0adcea718f764ad5a3855e1b000cd962" cached="false"><rect width="230" height="170" rx="22" ry="22" transform="translate(1 1)"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+                                       <stop offset="0%" stop-color="rgb(215, 105, 255)" />
+                                       <stop offset="100%" stop-color="rgb(79, 165, 246)" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            
+        </div>
+        <div id="games">
+            <div id="part-special-offer">
+                <div class="part-header">
+                    <h2>Special Offer</h2>
+                    <a>View All</a>
+                </div>
+                <section class="part-main">
+                    <a>
+                        <div class="image"></div>
+                        <div class="details">
+                            <div>
+                                <h4>Apex Legends</h4>
+                                <div>
+                                    <span class="price">$140</span>
+                                    <span class="old-price">$200</span>
+                                </div>
+                            </div>
+                            <span class="offer-percentage">30% Off</span>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <div class="details">
+                            <div>
+                                <h4>Dota 2</h4>
+                                <div>
+                                    <span class="price">$200</span>
+                                    <span class="old-price">$400</span>
+                                </div>
+                            </div>
+                            <span class="offer-percentage">50% Off</span>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <div class="details">
+                            <div>
+                                <h4>Apex Legends</h4>
+                                <div>
+                                    <span class="price">$50</span>
+                                    <span class="old-price">$100</span>
+                                </div>
+                            </div>
+                            <span class="offer-percentage">50% Off</span>
+                        </div>
+                    </a>
+                </section>
+            </div>
+            <div id="part-new-release">
+                <div class="part-header">
+                    <h2>New Release</h2>
+                    <a>View All</a>
+                </div>
+                <section class="part-main">
+                    <a>
+                        <div class="image"></div>
+                        <h4>Forza Horizon 5</h4>
+                        <span class="price">$200</span>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <h4>Monster Hunter RISE</h4>
+                        <span class="price">$90</span>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <h4>Daying Light 2</h4>
+                        <span class="price">$120</span>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <h4>Fallout 76</h4>
+                        <span class="price">$160</span>
+                    </a>
+                </section>
+            </div>
+            <div id="part-free-games">
+                <div class="part-header">
+                    <h2>Free Games</h2>
+                    <a>View All</a>
+                </div>
+                <section class="part-main">
+                    <a>
+                        <div class="image"></div>
+                        <h4>Chivalry 2</h4>
+                        <span class="price">$220</span>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <h4>Red Dead Redemption 2</h4>
+                        <span class="price">$90</span>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <h4>GTA V</h4>
+                        <span class="price">$120</span>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <h4>Cyberpunk</h4>
+                        <span class="price">$160</span>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <h4>Farcry 3</h4>
+                        <span class="price">$200</span>
+                    </a>
+                    <a>
+                        <div class="image"></div>
+                        <h4>God of War</h4>
+                        <span class="price">$60</span>
+                    </a>
+                </section>
+            </div>
+            <div id="part-categories">
+                <div class="part-header">
+                    <h2>Categories</h2>
+                    <a>View All</a>
+                </div>
+                <section class="part-main">
+                    <a><div class="image"></div></a>
+                    <a><div class="image"></div></a>
+                    <a><div class="image"></div></a>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <div>
+                <img id="footer-logo" src="/images/logo.png" alt="logo">
+                <p>Your ultimate desination for immersive gaming experiences, Explore, compete, and connect in a vibrant gaming universe unlike any other.</p>
+                <div>
+                    <a><svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#dedede"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#dedede"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#dedede"></path> </g></svg></a>
+                    <a><svg width="20px" height="20px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>facebook [#176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#dedede"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" id="facebook-[#176]"> </path> </g> </g> </g> </g></svg></a>
+                    <a><svg width="24px" height="24px" viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>twitter [#154]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7521.000000)" fill="#dedede"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705" id="twitter-[#154]"> </path> </g> </g> </g> </g></svg></a>
+                    <a><svg width="24px" height="24px" viewBox="0 -3 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>youtube [#168]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7442.000000)" fill="#dedede"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289" id="youtube-[#168]"> </path> </g> </g> </g> </g></svg></a>
+                </div>
+            </div>
+            <ul>
+                <h5>GET TO KNOW US</h5>
+                <li><a>About Us</a></li>
+                <li><a>Careers</a></li>
+                <li><a>Support</a></li>
+                <li><a>FAQ</a></li>
+            </ul>
+            <ul>
+                <h5>DISCOVER MORE</h5>
+                <li><a>Games</a></li>
+                <li><a>Additional Content</a></li>
+                <li><a>Game Items</a></li>
+            </ul>
+            <ul>
+                <h5>LET US HELP YOU</h5>
+                <li><a>My Account</a></li>
+                <li><a>My Orders</a></li>
+                <li><a>Privacy Policy</a></li>
+                <li><a>Set Cookies</a></li>
+                <li><a>Terms & Coditions</a></li>
+            </ul>
+            <ul>
+                <h5>SUBSCRIBE NEWSLETTER</h5>
+                <form>
+                    <input type="text" placeholder="Enter your email">
+                    <input type="submit" value="Submit">
+                </form>
+            </ul>
+        </div>
+        <span>
+            <svg width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22Z" stroke="#bec3c7" stroke-width="1.9200000000000004" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14.88 15C14.17 15.62 13.25 16 12.24 16C10.03 16 8.23999 14.21 8.23999 12C8.23999 9.79 10.03 8 12.24 8C13.25 8 14.17 8.38 14.88 9" stroke="#bec3c7" stroke-width="1.9200000000000004" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            2024 ArcadeVerse.All Rights Reserced <span>  -  Design by <a href="https://dennypratama.com">dennypratama.com</a></span>
+        </span>
+    </footer>
+    <div id="black-bg"></div>
+</body>
+</html>
