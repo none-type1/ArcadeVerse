@@ -26,18 +26,31 @@ document.querySelector("#title-game-slider > div:nth-child(5) div").style.backgr
 document.querySelector("#title-game-slider > div:nth-child(6) div").style.background = "url(/images/games/apex/main.png)"
 /* =======================*/
 const sliderOffsetFist = Number($("#title-game-slider-cover > span").css("width").slice(0,-2))
-document.querySelectorAll("#title-game-slider > div > div").forEach(function(x) {
-    x.addEventListener("click", function() {
-        const itemLocation = x.style.background.slice(5,-10)
-        $("#title").css({"background-image": `linear-gradient(90deg,rgba(0, 0, 0, 0.8) 20%, #00000000), url(${itemLocation}main.png)`})
-        document.querySelector("#title-detail > img").src = `${itemLocation}logo.png`
-        document.querySelectorAll("#title-game-slider > div > div").forEach(function(x) {x.classList.remove("selected")})
-        x.classList.add("selected")
-        const parent = $("#title-game-slider > div:has(> .selected)")[0]
-        $("#title-game-slider-cover > span").css({"width": `${sliderOffsetFist - parent.offsetLeft}px`})
-        $("#title-game-slider").css({"transform": `translate(${sliderOffsetFist + 20 - parent.offsetLeft}px, 0)`})
-    })
+$("#title-game-slider > div > div").each(function() {
+    $(this)[0].setAttribute("v-on:click", "titleSliderClick")
 })
+const titleGameSlider = Vue.createApp({
+    data() {
+        return {
+            titleBackground: "/images/games/dragons-dogma-2/main.png",
+            titleLogo: "/images/games/dragons-dogma-2/logo.png",
+            titleSliderTransform: ""
+        }
+    },
+    methods: {
+        titleSliderClick(event) {
+            const itemLocation = event.target.style.background.slice(5,-10)
+            this.titleBackground = `${itemLocation}main.png`
+            this.titleLogo = `${itemLocation}logo.png`
+            $("#title-game-slider > div > div").each(function() {$(this)[0].classList.remove("selected")})
+            event.target.classList.add("selected")
+            const parent = $("#title-game-slider > div:has(> .selected)")[0]
+            this.titleSliderTransform = `${sliderOffsetFist + 20 - parent.offsetLeft}px`
+        }
+    }
+
+})
+titleGameSlider.mount('main')
 // =======================================================================| games
 /* ==============================| game-slider */
 document.querySelectorAll("#games > div").forEach(function(gameSliderCover) {

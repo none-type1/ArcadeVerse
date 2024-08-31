@@ -8,8 +8,9 @@
     <meta name="auther" content="none-type1">
     <title>ArcadeVerse</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="jquery-3.7.1.min.js"></script>
-    <script type="module" src="script.js"></script> 
+    <script src="/vue.global.js" defer></script>
+    <script src="/jquery-3.7.1.min.js" defer></script>
+    <script type="module" src="script.js" defer></script> 
 </head>
 <body>
     <header>
@@ -47,9 +48,9 @@
         </div>
     </header>
     <main>
-        <div id="title">
+        <div id="title" :style="{ backgroundImage: 'linear-gradient(90deg,rgba(0, 0, 0, 0.8) 20%, #00000000), url('+ titleBackground +')' }">
             <div id="title-detail">
-                <img src="/images/games/dragons-dogma-2/logo.png" alt="Game-name">
+                <img :src="titleLogo" alt="Game-name">
                 <p>What dogma does your heart see through your eyes? 'Tis a tale of one who shall slay the Dragon and claim the throne.</p>
                 <span>$99</span>
                 <div>
@@ -66,8 +67,8 @@
                     </div>
                 </div>
                 <div id="title-game-slider-cover">
-                    <span></span>
-                    <section id="title-game-slider">
+                    <span :style="{ width: 'calc('+ titleSliderTransform +' - 20px )' }"></span>
+                    <section id="title-game-slider" :style="{ transform: 'translate(calc('+ titleSliderTransform +'), 0)' }">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 232 172" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="74ca0e11ba174eb2b555348627ccb4a5" export-id="0adcea718f764ad5a3855e1b000cd962" cached="false"><rect width="230" height="170" rx="22" ry="22" transform="translate(1 1)"/>
                                 <defs>
